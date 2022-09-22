@@ -2,7 +2,8 @@ import matplotlib as mpl
 import matplotlib.font_manager as font_manager
 
 # Add every font at the specified location
-font_dir = ['/storage/data/HLA/src/font']
+# arial ttf dir containing location
+font_dir = ['']
 for font in font_manager.findSystemFonts(font_dir):
     font_manager.fontManager.addfont(font)
 

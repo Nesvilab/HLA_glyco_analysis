@@ -10,7 +10,8 @@ studies = [x + '_glycFDR' for x in studies]
 # file_types = ["ion.tsv", "peptide.tsv", "protein.tsv", "psm.tsv"]
 file_types = ["peptide.tsv", "protein.tsv", "psm.tsv"]
 
-root = '/storage/data/HLA/_Results'
+# root directory
+root = ''
 out = os.path.join(root, 'reports_glycFDR')
 
 # to retrieve a table path fast
@@ -19,8 +20,15 @@ for file_type in file_types:
     key = file_type.rsplit('.', 1)[0]
     tables[key] = os.path.join(out, 'tables', file_type)
 
-tables['annotation'] = '/storage/data/HLA/datasets_annotation.tsv'
-database = '/storage/dpolasky/projects/HLA_atlas/2019-08-22-td-rev-UP000005640.fas'
-pwm_annotation_path = '/storage/data/HLA/_Results/reports_glycFDR/deconvolution/PWM_annotation.tsv'
+# supplementary table  1, sheet 1
+tables['annotation'] = ''
+
+# uniprot target decoy database with tag _rev for decoys
+database = ''
+
+# MoDec manual inspection table
+pwm_annotation_path = ''
+
+# psm table for Purcell_20210_PXD025877
 tables[
-    'Purcell_20210_PXD025877'] = '/storage/data/HLA/_Results/Purcell_2021_PXD025877_glycFDR/psm.tsv'
+    'Purcell_20210_PXD025877'] = ''

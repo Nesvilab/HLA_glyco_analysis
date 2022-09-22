@@ -3,12 +3,12 @@ import random
 
 import pandas as pd
 
-NETMHCPAN = "/storage/data/HLA/_Results/reports/deconvolution/netMHCIIpan-4.1/netMHCIIpan"
-NETMHCPAN_alleles = [
-    x.strip('\n') for x in open(
-        "/storage/data/HLA/_Results/reports/deconvolution/netMHCIIpan-4.1/data/allele.list"
-    ).readlines()
-]
+# NetMHCIIpan exec file location
+NETMHCPAN = ""
+
+# netMHCIIpan-4.1/data/allele.list file
+alleles_file = ''
+NETMHCPAN_alleles = [x.strip('\n') for x in open(alleles_file).readlines()]
 
 
 def get_hla_binding(peptide_list, alleles):

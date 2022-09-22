@@ -14,9 +14,6 @@ import plot_params
 from general_params_glycFDR import out, pwm_annotation_path, tables
 from helper_functions import get_hla_binding
 
-# /storage/data/HLA/_Results/reports_glycFDR/deconvolution/Subjects/3830-NJF/Responsibilities
-
-
 def read_deconvolution():
     pwm_annotation = pd.read_csv(pwm_annotation_path,
                                  sep='\t',
